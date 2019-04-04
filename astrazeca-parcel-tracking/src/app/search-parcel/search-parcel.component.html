@@ -1,0 +1,40 @@
+<div style="margin-left:200px">
+<h3>Find By Name</h3>
+<div style="width: 600px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label style = "padding:20px" for="parcelName">Enter The Parcel Name</label>
+      <input type="text" class="form-control" id="parcelName" required [(ngModel)]="parcelName" name="parcelName">
+    </div>
+ 
+    <div class="btn-group">
+      <button style = "margin-left: 20px; margin-top: 10px" type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+<!--
+  <li *ngIf="parcels">
+    <h4>{{parcels.parcelName}} </h4>
+  </li>
+-->
+<li *ngIf="parcels;then content else other_content"></li>    
+<ng-template #content> 
+  <h4>Parcel Id is           :{{parcels.parcelId}} </h4>
+  <h4>Parcel Name is         :{{parcels.parcelName}} </h4>
+  <h4>Parcel Status is       :{{parcels.parcelStatus}} </h4>
+  <h4>Parcel Type is         :{{parcels.parcelType}} </h4>
+  <h4> Parcel Location       :{{parcels.parcelLocation}} </h4>
+</ng-template>
+<ng-template #other_content>
+    <div [hidden]="!display">
+  <h4>No Matching Found</h4>
+  </div>
+</ng-template>
+
+</ul>
+</div>
+
+
+
+

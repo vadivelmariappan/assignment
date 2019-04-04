@@ -1,0 +1,46 @@
+<div style="margin-left:150px">
+<h3>Add Parcel</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group" style="padding: 5px">
+      <label for="parcelId">Parcel ID</label>
+      <input type="text" class="form-control" id="parcelId" required [(ngModel)]="parcel.parcelId" name="parcelId">
+    </div>
+ 
+    <div class="form-group" style="padding: 5px">
+      <label for="parcelName" style="width: 200px">Parcel Name</label>
+      <input type="text" class="form-control" id="parcelName" required [(ngModel)]="parcel.parcelName" name="parcelName">
+    </div>
+    <div class="form-group" style="padding: 5px">
+      <label for="parcelType" style="width: 100px">Parcel Type</label>
+      <input type="text" class="form-control" id="parcelType" required [(ngModel)]="parcel.parcelType" name="parcelType">
+    </div>
+    <div class="form-group" style="padding: 5px">
+      <label for="parcelStatus">Parcel Status</label>
+      <input type="text" class="form-control" id="parcelStatus" required [(ngModel)]="parcel.parcelStatus" name="parcelStatus">
+    </div>
+    <div class="form-group" style="padding: 5px">
+      <label for="parcelLocation">Parcel Location</label>
+      <input type="text" class="form-control" id="parcelLocation" required [(ngModel)]="parcel.parcelLocation" name="parcelLocation">
+    </div>
+ 
+    <button style="padding: 5px" type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<li *ngIf="wrongEnrty;then content else other_content"></li>    
+<ng-template #other_content> 
+  <div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+ 
+</div>
+</ng-template>
+<ng-template #content>
+    <div [hidden]="!submitted">
+  <h4>Error While Adding</h4>
+  <!--<button class="btn btn-success" (click)="newParcelTracking()">Add</button>-->
+</div>
+
+</ng-template>
+
+</div>

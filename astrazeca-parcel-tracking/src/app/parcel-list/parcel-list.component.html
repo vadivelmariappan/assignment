@@ -1,0 +1,13 @@
+<h2> Parcel List</h2>
+
+<li *ngIf="dataSize;then content else other_content"></li>   
+<ng-template #content>
+<div *ngFor="let parcel of parcels | async" style="width: 300px;">
+  <parcel-details [parcel]='parcel'></parcel-details>
+</div>
+</ng-template>
+<ng-template #other_content>
+  <h2>No Data Found</h2>
+</ng-template>
+
+ 

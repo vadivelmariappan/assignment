@@ -1,0 +1,25 @@
+<div *ngIf="parcel">
+  <div>
+    
+    <div>
+        <label>Parcel Id: </label> {{parcel.parcelId}}
+      </div>
+    <label>Parcel Name: </label> {{parcel.parcelName}}
+  </div>
+  <div>
+    <label>Parcel Type: </label> {{parcel.parcelType}}
+  </div>
+  <div>
+    <label>Parcel Status: </label> {{parcel.parcelStatus}}
+  </div>
+  <div>
+      <label>Delivery Location: </label> {{parcel.parcelDeliveryLocation}}
+    </div>
+    
+ 
+  <button class="button is-small btn-danger" (click)='deleteParcel()'>Delete</button>
+
+  <!--<button class="button is-small btn-danger" (click)='updateParcel()'>Update</button>-->
+ 
+
+</div>
