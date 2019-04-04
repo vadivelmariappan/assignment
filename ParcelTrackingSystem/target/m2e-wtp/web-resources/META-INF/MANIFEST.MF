@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ParcelTrackingSystem
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: HI
+Implementation-Vendor-Id: com.astrazeneca
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/ParcelTracki
+ ngSystem/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
